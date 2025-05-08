@@ -1,0 +1,17 @@
+Task - 1
+
+1. Upload a .csv file containing automotive parts specifications and descriptions.
+2. This acts as the context.
+3. This provide part name or descriptions of a part. This will act as an instruction to the language model.
+4. Upon receiving the query, RAG architecture will be followed.
+5. Here GPT-4 used as reasoning engine. For general purpose tasks, GPT models perform well. Also I had API tokens for GPT.
+6. GPT embeddings are used here.
+7. I've used Langchain framework to develop this since I'm most comfortable with this. If we are going to develop multi-agentic system, then LangGraph can be used.
+
+
+Task - 3
+1. Task-3 is integrated with task-1
+2. I've used FAISS used as VectorDB.
+3. Each row of the Parts.csv contains the details of the part.
+4. This entire row is combined into a single string and embeddings of this will be stored in the VectorDB.
+5. When an user wants to generate parts, he can provide part name or descriptions. Based on the parts already present in the DB LLM will generate 5 fictious parts.
